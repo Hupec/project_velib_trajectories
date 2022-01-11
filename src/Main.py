@@ -33,16 +33,14 @@ class Main:
             dfp = dfp[dfp["beginend"] == "end"]
             #creaction de trajectories
             traject = Trajectories()
-            # print(traject.velocitymoy(dfp))
-            # print(traject.distancemoy(dfp))
-            #print(traject.distance(dfp))
-            #print(traject.time(dfp))
+            print("La vitesse moyenne des velib :",traject.velocitymoy(dfp))
+            print("La distance moyenne parcourue par les velib :",traject.distancemoy(dfp))
             x,y = [np.array(list(traject.distance(dfp).values())).astype(float),np.array(list(traject.time(dfp).values())).astype(float)]
-            #print(x)
-            #print(y)
             plt.plot(x,y)
-            
-            print(traject.velocity(dfp))
+            v = traject.velocity(dfp)
+            #affichage avec mises en forme des vitesses :
+            for key,value in v.items():
+                print("Le velib ",key,"a une vitesse de :",value)
             
                     
       

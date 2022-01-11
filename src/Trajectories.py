@@ -14,26 +14,31 @@ class Trajectories:
     def velocity(self,path):
         dist = self.distance(path)
         time = self.time(path)
-        d = []
-        t = []
-        v = []
+        # d = []
+        # t = []
+        # v = []
         
-        for index in dist:
-                d.append(dist[index])
-        for index in time:
-                t.append(time[index])
+        # for index in dist:
+        #         d.append(dist[index])
+        # for index in time:
+        #         t.append(time[index])
         
-        for i in range(0,len(d)):
-              print(d[i]/t[i])  
+        # for i in range(1,len(d)):
+        #       print(d[i]/t[i])  
             
+        # return v
+        v = dict()
+        for key,value in dist.items():
+            v.update({key:value/time[key]})
         return v
+
     
     def time (self,path):
         path = path.copy()
         dic = {}
         for index,row in path.iterrows():
             if(row["hours"]>=0.0):
-                dic.update({row["idvelo"]:row["hours"]}) # on multiplie par 60 pour avoir les heures en minutes
+                dic.update({row["idvelo"]:row["hours"]})
         return dic
     
     def distance(self,path):
