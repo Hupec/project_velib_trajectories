@@ -37,6 +37,7 @@ class Main:
             print("La distance moyenne parcourue par les velib :",traject.distancemoy(dfp))
             x,y = [np.array(list(traject.distance(dfp).values())).astype(float),np.array(list(traject.time(dfp).values())).astype(float)]
             plt.plot(x,y)
+            plt.show()
             v = traject.velocity(dfp)
             #affichage avec mises en forme des vitesses :
             for key,value in v.items():
