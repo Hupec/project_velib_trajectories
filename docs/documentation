@@ -1,1 +1,54 @@
+DOCUMENTATION
+
+class 
+
+project_velib_trajectories.Trajectories.velocity(self,path)
+
+Bases:object
+
+retourne l'idvelo associé à la vitesse de chaque velib
+
+Parameters : - path : données du fichier path qui représente les trajectoires des velib de Besançon
+
+
+project_velib_trajectories.Trajectories.time(self,path)
+
+Bases: object
+
+retourne les idvelo associé au temps de trajet lorsqu'il est supérieur à 0
+
+Parameters : - path : données du fichier path qui représente les trajectoires des velib de Besançon
+
+
+project_velib_trajectories.Trajectories.distance
+
+Bases: object
+
+retourne les idvelo associés à la distance effectuée lorsqu'elle est supérieur à 0
+
+Parameters : - path : données du fichier path qui représente les trajectoires des velib de Besançon
+
+project_velib_trajectories.Trajectories.distancemoy
+
+Bases: object
+
+retourne la distance moyenne effectuée par les velib de Besançon
+
+Parameters : - path : données du fichier path qui représente les trajectoires des velib de Besançon
+
+project_velib_trajectories.Trajectories.velocitymoy
+
+Bases: object
+
+retourne la vitesse moyenne des velib de Besançon
+
+Parameters : - path : données du fichier path qui représente les trajectoires des velib de Besançon
+
+class
+
+project_velib_trajectories.Main.main(self)
+
+Bases: object
+
+permet les constructions des fichiers dans le dossier du projet afin de les utiliser dans le programme, permet de lancer le programme
 
